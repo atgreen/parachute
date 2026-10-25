@@ -16,7 +16,8 @@
                (:file "tester")
                (:file "report")
                (:file "documentation"))
-  :depends-on (:documentation-utils
+  :depends-on (:uiop
+               :documentation-utils
                :trivial-custom-debugger
                :form-fiddle))
 

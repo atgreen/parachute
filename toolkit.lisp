@@ -190,5 +190,6 @@
   #+mcl (progn code (ccl:quit))
   #+mkcl (mk-ext:quit :exit-code code)
   #+sbcl (sb-ext:exit :code code)
-  #-(or abcl allegro clasp clisp clozure cmucl ecl gcl genera lispworks mcl mkcl sbcl scl xcl)
+  #+egcl (uiop:quit code)
+  #-(or abcl allegro clasp clisp clozure cmucl ecl egcl gcl genera lispworks mcl mkcl sbcl scl xcl)
   (error "Quit ~d" code))
